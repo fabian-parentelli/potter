@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleRecPass {
+    text-align: center;
+}
+
+#formRecPass {
+    height: auto;
+    gap: 6px;
+
+    input {
+        padding: 4px;
+        height: 30px;
+        border-radius: 6px;
+        border: #003785 solid 1px;
+
+        &::placeholder {
+            color: #497bc0;
+        }
+    }
+
+    .btnRecPass {
+        margin-top: 6px;
+        font-size: 1.2rem;
+        height: auto;
+        border-radius: 6px;
+        border: #003785 solid 1px;
+        background-color: #315280;
+        padding: 6px 0;
+        transition: .3s;
+
+        &:hover {
+            background-color: #497bc0;
+        }
+    }
+}

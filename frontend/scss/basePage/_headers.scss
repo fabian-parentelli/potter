@@ -1,0 +1,46 @@
+.headerBPage {
+    width: 100%;
+
+    .headerBasePage {
+        width: 100%;
+        height: 50vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($headerBasePage);
+        background-size: cover;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        box-shadow: 0 5px 10px;
+
+        h1 {
+            color: wheat;
+            font-size: 3rem;
+            margin-right: 2rem;
+            text-align: center;
+        };
+
+        p {
+            color: wheat;
+            margin-right: 2rem;
+        };
+    };
+};
+
+@media screen and (max-width: 426px) {
+    .headerBPage {
+        .headerBasePage {
+            align-items: center;
+
+            h1 {
+                background-color: rgba(0, 0, 0, 0.315);
+                border-radius: 6px;
+                font-size: 2rem;
+            };
+
+            p {
+                margin-right: 0;
+            };
+        };
+    };
+};

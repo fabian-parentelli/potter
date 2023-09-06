@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Login Potter</title>
+</head>
+
+<body>
+    <!-- Navegador -->
+    <nav>
+        <img class="imgNav" id="logoBase"
+            src="https://res.cloudinary.com/do1chpjor/image/upload/v1693753348/asset/kq23wcgtkyi51ekm5hcd.png"
+            alt="logoPotter">
+        <div class="navRight">
+            <div id="inicialSesion"><a href="basePage.html">Menú principal</a></div>
+            <div class="cartContainerImg">
+                <div id="imgCart"></div>
+                <p id="contImgCart">0</p>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1 class="titleRegister">Inicia Sesión</h1>
+
+        <form id="formLogin">
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" placeholder="Este campo debe ser completado" required>
+            </div>
+            <div>
+                <label for="password">Contraseña</label>
+                <input type="text" name="password" placeholder="Este campo debe ser completado" required>
+            </div>
+            <input class="btnRegister" type="submit" value="Iniciar Sesión">
+        </form>
+    </header>
+
+    <main class="mainLogin">
+        <p>Si no tienes una cuenta, aquí puedes</p>
+        <button>
+            <a href="registroPage.html">Registrarte</a>
+        </button>
+    </main>
+
+    <div class="recPass">
+        <p>Recuperar contraseña</p>
+        <form id="recPass">
+            <input type="text" name="email" placeholder="Este campo debe ser completado" required>
+            <input class="btnRecPass" type="submit" value="Recuperar contraseña">
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <main>
+        <section class="modalRegister"></section>
+    </main>
+
+    <footer>
+        <div class="up">
+            <div>
+                <h4>Cervecería Potter</h4>           
+                <p>cerveceriapotter@gmail.com</p>           
+            </div>
+            
+            <div class="footRight">
+                <!-- Facebook -->
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
+                        <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M37,19h-2c-2.14,0-3,0.5-3,2 v3h5l-1,5h-4v15h-5V29h-4v-5h4v-3c0-4,2-7,6-7c2.9,0,4,1,4,1V19z"></path>
+                    </svg>
+                </a>
+                <!-- Instagrame -->
+               <a href="https://www.instagram.com/cerveza.potter/" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
+                    <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"></path>
+                </svg>
+               </a>
+            </div>
+        </div>
+        <p class="dev">Desarrollador FABIAN PARENTELLI  fabianparentelli007code@gmail.com</p>
+    </footer>
+
+    <script src="../javaScript/pages/loginPage.js" type="module"></script>
+</body>
+
+</html>
