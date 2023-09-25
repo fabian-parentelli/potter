@@ -247,6 +247,10 @@ nav .navRight .cartContainerImg #contImgCart {
 #current button:hover {
   background-color: #759eff;
 }
+#current button a {
+  text-decoration: none;
+  color: #375aaa;
+}
 
 @media screen and (max-width: 426px) {
   #current {
@@ -261,6 +265,66 @@ nav .navRight .cartContainerImg #contImgCart {
     padding: 2px;
   }
 }
+.mainBasePage {
+  width: 100%;
+  margin: 2rem 0;
+}
+.mainBasePage h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.mainBasePage #productsVew {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.mainBasePage #productsVew .showPrBasePag {
+  width: 250px;
+  height: auto;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: #c8ad8d;
+  box-shadow: 1px 3px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainBasePage #productsVew .showPrBasePag .name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.mainBasePage #productsVew .showPrBasePag div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.mainBasePage #productsVew .showPrBasePag div img {
+  width: 100%;
+  margin: 6px 0;
+}
+.mainBasePage #productsVew .showPrBasePag div button {
+  width: 60%;
+  padding: 6px;
+  margin-top: 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #d8f8e1;
+  transition: 0.3s;
+}
+.mainBasePage #productsVew .showPrBasePag div button:hover {
+  background-color: #b0f2c2;
+}
+.mainBasePage #productsVew .showPrBasePag div p span {
+  font-weight: 600;
+}
+
 h1 {
   text-align: center;
 }
@@ -682,6 +746,409 @@ footer .dev {
 }
 .ConsolaContainer #consoleBody .divProductos #formNewProduct .fnp input {
   width: 100%;
+}
+.ConsolaContainer #consoleBody .vewProducts {
+  width: 100%;
+  padding: 1rem 0.5rem;
+}
+.ConsolaContainer #consoleBody .vewProducts .vewProducts_vew {
+  width: 100%;
+  min-height: 100px;
+  background-color: #6aa3b4;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 1rem;
+}
+.ConsolaContainer #consoleBody .vewProducts .vewProducts_vew .name {
+  font-weight: 600;
+}
+.ConsolaContainer #consoleBody .vewProducts .vewProducts_vew div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ConsolaContainer #consoleBody .vewProducts .vewProducts_vew div img {
+  width: 70px;
+}
+.ConsolaContainer #consoleBody .vewProducts .vewProducts_vew div span {
+  font-weight: 600;
+}
+.ConsolaContainer #consoleBody .vewProducts .vewProducts_vew div #stock {
+  background-color: wheat;
+  width: 95px;
+  border-radius: 6px;
+  padding: 0.4rem;
+}
+.ConsolaContainer #consoleBody .vewProducts .vewProducts_vew div #stock span {
+  margin-right: 0.4rem;
+}
+.ConsolaContainer #consoleBody .vewProducts .vewProducts_vew div .asset {
+  color: whitesmoke;
+  border-radius: 6px;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+.ConsolaContainer #consoleBody .vewProducts .vewProducts_vew div .asset span {
+  margin-right: 0.4rem;
+}
+.ConsolaContainer #consoleBody .divSearchProduc {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.ConsolaContainer #consoleBody .divSearchProduc #searchProduct {
+  height: auto;
+}
+.ConsolaContainer #consoleBody .divSearchProduc #searchProduct div {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.ConsolaContainer #consoleBody .divSearchProduc #searchProduct div input {
+  width: 100%;
+  margin-bottom: 0.6rem;
+}
+.ConsolaContainer #consoleBody .divProductosUpdate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ConsolaContainer #consoleBody .divProductosUpdate h2 {
+  margin: 1rem 0;
+}
+.ConsolaContainer #consoleBody .divProductosUpdate form {
+  text-align: left;
+  height: auto;
+  background-color: #6aa3b4;
+}
+.ConsolaContainer #consoleBody .divProductosUpdate form div label {
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+.ConsolaContainer #consoleBody .divProductosUpdate form .uploader {
+  margin-top: 1rem;
+}
+
+.divClientes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.divClientes #formNewCustomer {
+  background-color: #ffda9e;
+}
+.divClientes #formNewCustomer .fnRadial {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.divClientes #formNewCustomer .fnRadial div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.searchCustomer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+.searchCustomer #formGetCustomer {
+  margin-top: 1rem;
+  height: auto;
+  padding: 6px;
+  background-color: #ffda9e;
+  display: flex;
+  align-items: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.searchCustomer #formGetCustomer div {
+  width: 100%;
+  text-align: left;
+}
+.searchCustomer #formGetCustomer .watchTypeCliente select {
+  height: 30px;
+  border-radius: 6px;
+}
+.searchCustomer #formGetCustomer .watchfromCliente select {
+  height: 30px;
+  border-radius: 6px;
+}
+.searchCustomer #formGetCustomer .btnCustomer {
+  width: 100%;
+  height: 30px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.searchCustomer #formGetCustomer .btnCustomer:hover {
+  background-color: rgb(163, 69, 69);
+}
+
+.tableHead {
+  width: 100%;
+}
+.tableHead thead {
+  width: 100%;
+}
+.tableHead thead tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #ffda9e;
+}
+.tableHead thead tr th {
+  width: 16%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tableCustomer {
+  width: 100%;
+}
+.tableCustomer tbody {
+  width: 100%;
+}
+.tableCustomer tbody tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tableCustomer tbody tr th {
+  width: 16%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchCustomer {
+  height: auto;
+  gap: 1rem;
+}
+
+#formUpdateCustomer {
+  background-color: #ffda9e;
+}
+#formUpdateCustomer .fnRadial {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#formUpdateCustomer .fnRadial div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+@media screen and (max-width: 426px) {
+  .tableHead thead tr th {
+    font-size: 12px;
+    width: auto;
+  }
+  .tableCustomer tbody tr {
+    justify-content: space-between;
+  }
+  .tableCustomer tbody tr th {
+    font-size: 6px;
+  }
+}
+.vewCash {
+  width: 100%;
+}
+.vewCash #cashVewShow {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  gap: 1rem;
+}
+.vewCash #cashVewShow div {
+  border: 3px solid #b87420;
+  border-radius: 6px;
+  background-color: #c8ad8d;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.vewCash #cashVewShow div label {
+  font-weight: 600;
+}
+.vewCash #cashVewShow div input {
+  height: 30px;
+  border-radius: 6px;
+  border: #b87420 1px solid;
+  text-align: center;
+  box-shadow: 1px 2px 8px;
+}
+
+.sellCustomer {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sellCustomer #formGetCustomerSell {
+  margin-top: 1rem;
+  height: auto;
+  padding: 1rem;
+  background-color: rgb(131, 155, 90);
+  gap: 1rem;
+}
+.sellCustomer #formGetCustomerSell .watchTypeCliente select {
+  height: 30px;
+  border-radius: 6px;
+}
+.sellCustomer #formGetCustomerSell .btnCustomer {
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: rgb(25, 87, 141);
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.sellCustomer #formGetCustomerSell .btnCustomer:hover {
+  background-color: rgb(13, 43, 70);
+}
+
+.vewCustomerSelled {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.vewCustomerSelled div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.vewCustomerSelled div h3 span {
+  font-weight: 300;
+}
+.vewCustomerSelled button {
+  height: auto;
+  padding: 3px;
+  border-radius: 6px;
+  background-color: #fe9393;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.vewCustomerSelled button:hover {
+  background-color: #f86f6f;
+}
+
+.containerProdSell {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+.containerProdSell .divSellProd {
+  width: 150px;
+  padding: 6px;
+  border-radius: 6px;
+  border: solid 3px #416864;
+  background-color: #6d8b89;
+  box-shadow: 0 3px 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.containerProdSell .divSellProd:active {
+  box-shadow: none;
+}
+.containerProdSell .divSellProd:hover {
+  background-color: #416864;
+}
+
+.sellForm {
+  align-items: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.sellForm #formSellProduct {
+  height: auto;
+  padding: 6px;
+  background-color: #416864;
+}
+.sellForm #formSellProduct .fnp input {
+  text-align: center;
+}
+.sellForm #formSellProduct .quantity {
+  margin: 1rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.sellForm #formSellProduct .quantity button {
+  width: 60px;
+  background-color: #fecc93;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.sellForm #formSellProduct .quantity button:hover {
+  background-color: #f7ad5a;
+}
+.sellForm #formSellProduct .quantity input {
+  width: 60px;
+  text-align: center;
+}
+
+.btnVewCart {
+  width: 200px;
+  height: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #416864;
+  border: #416864 solid 2px;
+  border-radius: 6px;
+  box-shadow: 6px 5px 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.btnVewCart:active {
+  box-shadow: none;
+}
+.btnVewCart:hover {
+  background-color: #6d8b89;
+}
+
+@media screen and (max-width: 426px) {
+  .containerProdSell {
+    gap: 6px;
+  }
+  .containerProdSell .divSellProd {
+    padding: 1px;
+    width: 75px;
+    height: 135px;
+  }
+  .containerProdSell .divSellProd p {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -36,7 +36,7 @@ const recoverPassword = async (req, res) => {
         const result = await userService.recoverPassword(email);
         res.sendSuccess(result);
     } catch (error) {
-        if (error instanceof UserNotFound) res.sendClientError(error.message);
+        if (error instanceof UserNotFound) return res.sendClientError(error.message);
         res.sendServerError(error.message);
     };
 };
@@ -47,7 +47,7 @@ const inetr_pass = async (req, res) => {
         const result = await userService.inetr_pass(id);
         res.redirect(result);
     } catch (error) {
-        if (error instanceof UserNotFound) res.sendClientError(error.message);
+        if (error instanceof UserNotFound) return res.sendClientError(error.message);
         res.sendServerError(error.message);
     };
 };
@@ -59,7 +59,7 @@ const newPassword = async (req, res) => {
         const result = await userService.newPassword(user, password);
         res.sendSuccess(result);
     } catch (error) {
-        if (error instanceof UserNotFound) res.sendClientError(error.message);
+        if (error instanceof UserNotFound) return res.sendClientError(error.message);
         res.sendServerError(error.message);
     };
 };

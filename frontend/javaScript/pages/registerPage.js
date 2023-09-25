@@ -19,7 +19,6 @@ formRegister.addEventListener('submit', async (e) => {
     });
 
     const content = await response.json();
-    console.log(content);
 
     if(content.error) {
         modalWatch(content.error, 'asset');

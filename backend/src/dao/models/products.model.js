@@ -11,7 +11,7 @@ const productSchema = new mongoose.Schema({
     smallPrice: { type: Number },
     imgName: { type: String },
     imgUrl: { type: String },
-    stock: { type: Number },
+    stock: { type: Number, default: 0 },
     asset: { type: Boolean, default: true }
 });
 

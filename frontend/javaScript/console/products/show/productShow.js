@@ -1,5 +1,6 @@
 const consoleMain = document.querySelector('#consoleMain');
 const consoleBody = document.querySelector('#consoleBody');
+const modal = document.querySelector('.modalRegister');
 
 export function productMenu() {
     consoleMain.innerHTML = '';
@@ -16,6 +17,10 @@ export function productMenu() {
             <div>
                 <label>Ver productos</label=>
                 <input type='radio' name='productType' value='vewProduct'>
+            </div>
+            <div>
+                <label>Modificar Producto</label=>
+                <input type='radio' name='productType' value='modifyProduct'>
             </div>
         </div>
     `;
@@ -40,9 +45,17 @@ function watchTypeProduct(selectedValue) {
     if (selectedValue === "newProducts") {
         import('./productNew.js').then((module) => {
             const newProducto = module.newProducto;
-            newProducto();
+            newProducto(modal);
+        });
+    } else if(selectedValue === "vewProduct") {
+        import('./productVew.js').then((module) => {
+            const vewProduct = module.vewProduct;
+            vewProduct(modal);
         });
     } else {
-        console.log(selectedValue);
+        import('./productUpdate.js').then((module) => {
+            const updateProducto = module.updateProducto;
+            updateProducto(modal);
+        });
     };
 };

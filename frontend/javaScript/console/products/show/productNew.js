@@ -1,6 +1,6 @@
 import { productNewLogic } from '../logic/productLogic.js';
 
-export function newProducto() {
+export function newProducto(modal) {
     consoleBody.innerHTML = '';
 
     const div = document.createElement('div');
@@ -40,5 +40,5 @@ export function newProducto() {
     `;
     consoleBody.appendChild(div);
     const formNewProduct = document.querySelector('#formNewProduct');
-    productNewLogic(formNewProduct);
+    productNewLogic(formNewProduct, modal);
 };

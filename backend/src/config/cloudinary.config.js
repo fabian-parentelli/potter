@@ -9,7 +9,8 @@ cloudinary.config({
 
 const uploadToCloudinary = (req, res, next) => {
     if (!req.file) {
-        return next(new Error('No se ha proporcionado una imagen.'));
+        req.cloudinaryUrl = null;
+        return next();
     }
 
     cloudinary.uploader.upload_stream({ folder: 'photos' }, (error, result) => {
@@ -23,4 +24,19 @@ const uploadToCloudinary = (req, res, next) => {
     }).end(req.file.buffer);
 };
 
-export default uploadToCloudinary;
+const deleteImg = async (publicId) => {
+    const result = await cloudinary.uploader.destroy(publicId);
+    return result;
+};
+
+const getPublicId = (url) => {
+    const regex = /\/v\d+\/(.+)\.\w+/;
+    const match = url.match(regex);
+    if (match && match.length > 1) {
+        return match[1]; 
+    } else {
+        throw new Error('URL de Cloudinary no válida');
+    };
+};
+
+export { uploadToCloudinary, deleteImg, getPublicId };
