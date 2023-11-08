@@ -1,11 +1,10 @@
-
 export function getCashShow() {
     consoleBody.innerHTML = '';
 
     const div = document.createElement('div');
     div.className = 'vewCash';
     div.innerHTML = `
-        <div id="cashVewShow">
+        <div id="cashVewShow" class="cashVewShow">
 
             <div>
                 <label for="name">Caja Fabian</label>
@@ -25,6 +24,5 @@ export function getCashShow() {
         </div>
     `;
     consoleBody.appendChild(div);
-    // const formGetCustomer = document.querySelector('#formGetCustomer');
     // searchCustomer(formGetCustomer, modal);
 };

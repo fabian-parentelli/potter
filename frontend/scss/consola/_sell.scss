@@ -137,7 +137,6 @@
     }
 }
 
-
 .btnVewCart {
     width: 200px;
     height: 40px;
@@ -157,6 +156,120 @@
     }
 }
 
+.divCartPreVew {
+    margin-top: 2rem;
+    width: 100%;
+    .cartOne {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        input {
+            padding: 6px;
+            text-align: center;
+            border-radius: 6px;
+            border: 1px solid cadetblue;
+        }
+        .inputQuan {
+            width: 30px;
+        }
+        .inputProd {
+            width: 130px;
+        }
+        .inputPric {
+            width: 60px;
+        }
+        p {
+            font-weight: 600;
+        }
+    }
+}
+
+.divResult {
+    margin-top: 2rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    span {
+        width: 300px;
+        border-top: solid 2px black;
+        display: block;
+    }
+
+    .cartTwo {
+        margin-top: 1rem;
+        button {
+            width: 40px;
+            height: 40px;
+            margin: 0 1rem;
+            border-radius: 6px;
+            cursor: pointer; 
+        }
+        .min {
+            color: red;
+            background-color: rgba(255, 0, 0, 0.418);
+            transition: .3s;
+            &:hover {
+                background-color: rgba(255, 0, 0, 0.24);
+            }
+        }
+        .max {
+            color: green;
+            background-color: rgba(0, 128, 0, 0.411);
+            transition: .3s;
+            &:hover {
+                background-color: rgba(0, 128, 0, 0.123);
+            }
+        }
+        input {
+            width: 40px;
+            padding: 6px;
+            text-align: center;
+            border-radius: 6px;
+            border: 1px solid cadetblue;
+            height: 40px;
+        }
+    }
+}
+
+.divBtnVewCart {
+    margin-bottom: 1rem;
+    button {
+        padding: 6px;
+        border-radius: 6px;
+        margin: 6px 2rem;
+        width: 120px;
+        font-size: 1rem;
+        transition: .3s;
+        cursor: pointer;
+        box-shadow: 6px 5px 15px;
+    } 
+    .cash {
+        border: rgb(15, 65, 15) solid 2px;
+        background-color: rgba(15, 65, 15, 0.404);
+        &:hover {
+            background-color: rgb(15, 65, 15);
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+    .credit {
+        border: #960018 solid 2px;
+        background-color: #cb4c46;
+        &:hover {
+            background-color: #960018;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+}
 
 @media screen and (max-width: 426px) {
     .containerProdSell {

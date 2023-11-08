@@ -1,6 +1,7 @@
 import { productRepository } from "../repositories/index.repositories.js";
 import { ProductNotFound } from "../utils/custom-exceptions.js";
 import { getPublicId, deleteImg } from '../config/cloudinary.config.js';
+import { createInventary } from './inventory.service.js'
 
 const save = async (product, imgName, imgUrl) => {
 
@@ -15,6 +16,8 @@ const save = async (product, imgName, imgUrl) => {
     product.imgUrl = imgUrl;
     const result = await productRepository.save(product);
     if (!result) throw new ProductNotFound('El producto no se pudo agregar');
+
+    await createInventary(result._id);
     return result;
 };
 

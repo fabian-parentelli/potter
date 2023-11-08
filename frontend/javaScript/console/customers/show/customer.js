@@ -4,6 +4,7 @@ const modal = document.querySelector('.modalRegister');
 
 export function showCustomer() {
     consoleMain.innerHTML = '';
+    consoleFooter.innerHTML = '';
 
     const div = document.createElement('div');
     div.className = 'productMain';

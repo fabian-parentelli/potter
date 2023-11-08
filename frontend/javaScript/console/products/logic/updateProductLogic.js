@@ -8,7 +8,7 @@ export function updateProductLogic(searchProduct, modal) {
     searchProduct.addEventListener('submit', async (e) => {
 
         e.preventDefault();
-        const name = document.querySelector('#searchProduct [name="name"]').value;
+        const name = document.querySelector('#searchProduct [name="name"]').value.toLowerCase();
 
         const response = await fetch(`http://localhost:8080/api/product/${name}`, {
             method: 'GET',

@@ -25,3 +25,24 @@ export class CartNotFound extends Error {
         this.name = this.constructor.name;
     };
 };
+
+export class InventoryNotFound extends Error {
+    constructor(message) {
+        super(message);
+        this.name = this.constructor.name;
+    };
+};
+
+export class InventoryDocNotFound extends Error {
+    constructor(message) {
+        super(message);
+        this.name = this.constructor.name;
+    };
+};
+
+export class BottlesNotFound extends Error {
+    constructor(message) {
+        super(message);
+        this.name = this.constructor.name;
+    };
+};

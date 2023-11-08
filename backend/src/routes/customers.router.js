@@ -7,7 +7,8 @@ export default class CustomerRouter extends Router {
         this.post('/', ['ADMIN'], passportEnum.JWT, customerController.save);
         this.get('/', ['ADMIN'], passportEnum.JWT, customerController.get);
         this.get('/:name', ['ADMIN'], passportEnum.JWT, customerController.getByName);
-        this.get('/:cid', ['ADMIN'], passportEnum.JWT, customerController.getByCart);
+        this.get('/cart/:cid', ['ADMIN'], passportEnum.JWT, customerController.getByCart);
+        this.get('/id/:id', ['ADMIN'], passportEnum.JWT, customerController.getById);
         this.put('/', ['ADMIN'], passportEnum.JWT, customerController.update);
     };
 };

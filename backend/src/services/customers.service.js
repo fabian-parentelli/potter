@@ -46,9 +46,15 @@ const getByName = async (name) => {
     return result;
 };
 
+const getById = async (id) => {
+    const result = await customerRepository.getById(id);
+    if (!result) throw new CustomerNotFound('El cliente no se encuentra');
+    return result;
+};
+
 const getByCart = async (cart) => {
     const result = await customerRepository.getByCart(cart);
-    if (!result) throw new CustomerNotFound('El cliente no se encuentra registrado');
+    if (!result) throw new CustomerNotFound('El cliente no se encuentra');
     return result;
 };
 
@@ -61,4 +67,4 @@ const update = async (customer) => {
     return { status: 'success', updateCustomer };
 };
 
-export { save, get, getByName, update, getByCart };
+export { save, get, getByName, update, getByCart, getById };

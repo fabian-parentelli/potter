@@ -5,10 +5,10 @@ import mongoDB from './dao/mongo.js'
 import cors from 'cors';
 import config from './config/dotEnv.config.js';
 
-import { userRouter } from './routes/index.router.js';
-import { productRouter } from './routes/index.router.js';
-import { customerRouter } from './routes/index.router.js'
-import { cartRouter } from './routes/index.router.js';
+import { 
+    userRouter, productRouter, customerRouter, cartRouter, 
+    inventaryRouter, inventoryDocRouter, bottlesRouter 
+} from './routes/index.router.js';
 
 const app = express();
 mongoDB();
@@ -24,5 +24,8 @@ app.use('/api/user', userRouter);
 app.use('/api/product', productRouter);
 app.use('/api/customer', customerRouter);
 app.use('/api/cart', cartRouter);
+app.use('/api/inventory', inventaryRouter);
+app.use('/api/inventorydoc', inventoryDocRouter);
+app.use('/api/bottle', bottlesRouter);
 
 app.listen(config.port, () => console.log('Server conected'));

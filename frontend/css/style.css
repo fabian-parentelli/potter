@@ -970,7 +970,7 @@ footer .dev {
 .vewCash {
   width: 100%;
 }
-.vewCash #cashVewShow {
+.vewCash .cashVewShow {
   width: 100%;
   margin-top: 1rem;
   display: flex;
@@ -979,7 +979,7 @@ footer .dev {
   text-align: center;
   gap: 1rem;
 }
-.vewCash #cashVewShow div {
+.vewCash .cashVewShow div {
   border: 3px solid #b87420;
   border-radius: 6px;
   background-color: #c8ad8d;
@@ -987,10 +987,10 @@ footer .dev {
   display: flex;
   flex-direction: column;
 }
-.vewCash #cashVewShow div label {
+.vewCash .cashVewShow div label {
   font-weight: 600;
 }
-.vewCash #cashVewShow div input {
+.vewCash .cashVewShow div input {
   height: 30px;
   border-radius: 6px;
   border: #b87420 1px solid;
@@ -1137,6 +1137,119 @@ footer .dev {
   background-color: #6d8b89;
 }
 
+.divCartPreVew {
+  margin-top: 2rem;
+  width: 100%;
+}
+.divCartPreVew .cartOne {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.divCartPreVew .cartOne input {
+  padding: 6px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid cadetblue;
+}
+.divCartPreVew .cartOne .inputQuan {
+  width: 30px;
+}
+.divCartPreVew .cartOne .inputProd {
+  width: 130px;
+}
+.divCartPreVew .cartOne .inputPric {
+  width: 60px;
+}
+.divCartPreVew .cartOne p {
+  font-weight: 600;
+}
+
+.divResult {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.divResult span {
+  width: 300px;
+  border-top: solid 2px black;
+  display: block;
+}
+.divResult .cartTwo {
+  margin-top: 1rem;
+}
+.divResult .cartTwo button {
+  width: 40px;
+  height: 40px;
+  margin: 0 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.divResult .cartTwo .min {
+  color: red;
+  background-color: rgba(255, 0, 0, 0.418);
+  transition: 0.3s;
+}
+.divResult .cartTwo .min:hover {
+  background-color: rgba(255, 0, 0, 0.24);
+}
+.divResult .cartTwo .max {
+  color: green;
+  background-color: rgba(0, 128, 0, 0.411);
+  transition: 0.3s;
+}
+.divResult .cartTwo .max:hover {
+  background-color: rgba(0, 128, 0, 0.123);
+}
+.divResult .cartTwo input {
+  width: 40px;
+  padding: 6px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid cadetblue;
+  height: 40px;
+}
+
+.divBtnVewCart {
+  margin-bottom: 1rem;
+}
+.divBtnVewCart button {
+  padding: 6px;
+  border-radius: 6px;
+  margin: 6px 2rem;
+  width: 120px;
+  font-size: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 6px 5px 15px;
+}
+.divBtnVewCart .cash {
+  border: rgb(15, 65, 15) solid 2px;
+  background-color: rgba(15, 65, 15, 0.404);
+}
+.divBtnVewCart .cash:hover {
+  background-color: rgb(15, 65, 15);
+}
+.divBtnVewCart .cash:active {
+  box-shadow: none;
+}
+.divBtnVewCart .credit {
+  border: #960018 solid 2px;
+  background-color: #cb4c46;
+}
+.divBtnVewCart .credit:hover {
+  background-color: #960018;
+}
+.divBtnVewCart .credit:active {
+  box-shadow: none;
+}
+
 @media screen and (max-width: 426px) {
   .containerProdSell {
     gap: 6px;
@@ -1149,6 +1262,422 @@ footer .dev {
   .containerProdSell .divSellProd p {
     font-size: 14px;
   }
+}
+.inventary {
+  width: 100%;
+  margin-top: 1rem;
+}
+.inventary h4 {
+  font-size: 2rem;
+}
+.inventary .inventaryRadial {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 1rem;
+}
+
+.divProduct-Inv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 0;
+  margin-top: 1rem;
+}
+.divProduct-Inv h4 {
+  font-size: 1.4rem;
+}
+.divProduct-Inv .formProduct-inv {
+  height: auto;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: rgba(16, 153, 187, 0.5411764706);
+}
+.divProduct-Inv .formProduct-inv #product_inv {
+  border-radius: 6px;
+  height: 30px;
+  border: solid 1px #1099bb;
+}
+.divProduct-Inv .formProduct-inv .btnProduct-inv {
+  border-radius: 6px;
+  border: solid 1px #1099bb;
+  height: 30px;
+  cursor: pointer;
+  box-shadow: 1px 2px 8px;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.divProduct-Inv .formProduct-inv .btnProduct-inv:active {
+  box-shadow: none;
+}
+.divProduct-Inv .formProduct-inv .btnProduct-inv:hover {
+  background-color: #1099bb;
+}
+.divProduct-Inv .formProduct-inv .quantity-inv {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0 1rem;
+}
+.divProduct-Inv .formProduct-inv .quantity-inv input {
+  border: solid 1px #1099bb;
+  width: 60px;
+}
+
+.divFather {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.divFather .vewInventary {
+  margin-top: 1rem;
+  border: solid #1099bb;
+  border-radius: 6px;
+  width: 200px;
+}
+.divFather .vewInventary h3 {
+  background-color: #1099bb;
+  padding: 6px;
+}
+.divFather .vewInventary .divPro {
+  background-color: rgba(127, 255, 212, 0.466);
+  padding: 6px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.divFather .vewInventary .divPro li {
+  list-style: none;
+}
+
+.divContent {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.divContent .divDocs {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.divContent .divDocs h4 {
+  text-align: left;
+}
+.divContent .divDocs .divTicket {
+  border: solid 2px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #8fabb3;
+}
+.divContent .divDocs .divTicket .operacion {
+  border-radius: 3px 3px 0 0;
+  background-color: #1099bb;
+  padding: 6px 0;
+}
+.divContent .divDocs .divTicket p span {
+  font-weight: 600;
+}
+.divContent .divDocs .divTicket .prodQuantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 8px;
+}
+.divContent .divDocs .divTicket .prodQuantity .qauntity {
+  font-weight: 600;
+}
+
+.modifyShow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modifyShow h4 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.modifyShow .formModifyInv {
+  margin-top: 1rem;
+  height: auto;
+  gap: 1rem;
+  background-color: #1099bb;
+}
+.modifyShow .formModifyInv select {
+  height: 30px;
+  border-radius: 6px;
+}
+.modifyShow .formModifyInv .divInventory {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.modifyShow .formModifyInv .divInventory label {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+.modifyShow .formModifyInv .divInventory input {
+  width: 60px;
+}
+.modifyShow .formModifyInv .btnProduct-inv {
+  height: 30px;
+  border-radius: 6px;
+  border: solid 1px;
+  box-shadow: 1px 1px 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #85d4e7;
+}
+.modifyShow .formModifyInv .btnProduct-inv:hover {
+  background-color: #78abb8;
+}
+.modifyShow .formModifyInv .btnProduct-inv:active {
+  box-shadow: none;
+}
+
+.showModifyInv {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.showModifyInv .formModifyOk {
+  background-color: #1099bb;
+  height: auto;
+  padding: 6px;
+}
+.showModifyInv .formModifyOk .divPro {
+  margin: 2px 0;
+}
+.showModifyInv .formModifyOk .divPro .fnc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.showModifyInv .formModifyOk .divPro .fnc label {
+  width: 70%;
+}
+.showModifyInv .formModifyOk .divPro .fnc input {
+  width: 30%;
+  text-align: center;
+}
+.showModifyInv .formModifyOk .btnProduct-inv {
+  height: 30px;
+  border-radius: 6px;
+  border: solid 1px;
+  box-shadow: 1px 1px 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #85d4e7;
+  margin-top: 6px;
+}
+.showModifyInv .formModifyOk .btnProduct-inv:hover {
+  background-color: #78abb8;
+}
+.showModifyInv .formModifyOk .btnProduct-inv:active {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 426px) {
+  .divFather {
+    flex-direction: column;
+  }
+  .divContent .divDocs .divTicket .prodQuantity {
+    gap: 0;
+  }
+}
+.addBottle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.addBottle h4 {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+.addBottle .formBottle {
+  height: auto;
+  background-color: #1099bb;
+  padding: 6px;
+  gap: 6px;
+}
+.addBottle .formBottle select {
+  height: 30px;
+  border-radius: 6px;
+  border: 1px #0b414e solid;
+}
+.addBottle .formBottle .bottleQunatiyty {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+.addBottle .formBottle .bottleQunatiyty input {
+  width: 60px;
+}
+.addBottle .formBottle .bottleQunatiyty label {
+  margin-right: 2rem;
+}
+.addBottle .formBottle .radialBottle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #4c8694;
+  border-radius: 6px;
+  width: 100%;
+}
+.addBottle .formBottle .radialBottle .rad {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.addBottle .formBottle .btnBottle {
+  height: 30px;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px #0b414e solid;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.addBottle .formBottle .btnBottle:hover {
+  background-color: #4c8694;
+}
+.addBottle .formBottle .btnBottle:active {
+  border: none;
+}
+
+.divContBottle {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem 0;
+  flex-wrap: wrap;
+}
+.divContBottle .divBottle {
+  width: 280px;
+  height: fit-content;
+  border: #0b414e solid 2px;
+  border-radius: 6px;
+  background-color: #1099bb;
+}
+.divContBottle .divBottle .divPro {
+  background-color: #4c8694;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+}
+.divContBottle .divBottle .divPro p:first-child {
+  font-weight: 600;
+}
+.divContBottle .divBottle .divCre {
+  background-color: #4c8694;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px;
+}
+.divContBottle .divBottle .divCre p:first-child {
+  font-weight: 600;
+  color: rgb(107, 10, 10);
+}
+
+.divBottleFind {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.divBottleFind #formBottleFind {
+  height: auto;
+  gap: 1rem;
+  background-color: #0b414e;
+  padding: 6px;
+}
+.divBottleFind #formBottleFind select {
+  border-radius: 6px;
+  height: 30px;
+}
+.divBottleFind #formBottleFind input {
+  background-color: #1099bb;
+  height: 30px;
+  border: #0b414e solid 2px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 1px 1px 1px;
+}
+.divBottleFind #formBottleFind input:hover {
+  background-color: #4c8694;
+}
+.divBottleFind #formBottleFind input:active {
+  box-shadow: none;
+}
+
+.divModifyBottle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.divModifyBottle .formModifyBottle {
+  background-color: #0b414e;
+  color: aliceblue;
+  height: auto;
+}
+.divModifyBottle .formModifyBottle .prodBottle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+.divModifyBottle .formModifyBottle .prodBottle input {
+  width: 60px;
+  text-align: center;
+}
+.divModifyBottle .formModifyBottle .credito {
+  color: rgb(214, 100, 100);
+}
+.divModifyBottle .formModifyBottle .credBottle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+}
+.divModifyBottle .formModifyBottle .credBottle input {
+  width: 60px;
+  background-color: rgb(214, 100, 100);
+  border: black;
+  text-align: center;
+}
+.divModifyBottle .formModifyBottle .buttonModifyButton {
+  background-color: #1099bb;
+  height: 30px;
+  border: #0b414e solid 2px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 1px 1px 1px;
+}
+.divModifyBottle .formModifyBottle .buttonModifyButton:hover {
+  background-color: #4c8694;
+}
+.divModifyBottle .formModifyBottle .buttonModifyButton:active {
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=style.css.map */

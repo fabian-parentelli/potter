@@ -35,6 +35,17 @@ const getByName = async (req, res) => {
     };
 };
 
+const getById = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const result = await customerService.getById(id);
+        if (result) return res.sendSuccess(result);
+    } catch (error) {
+        if (error instanceof CustomerNotFound) return res.sendClientError(error.message);
+        res.sendServerError(error.message);
+    };
+};
+
 const getByCart = async (req, res) => {
     const { cid } = req.params;
     try {
@@ -57,4 +68,4 @@ const update = async (req, res) => {
     };
 };
 
-export { save, get, getByName, update, getByCart };
+export { save, get, getByName, update, getByCart, getById };

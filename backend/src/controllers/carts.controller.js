@@ -33,4 +33,27 @@ const addToCart = async (req, res) => {
     };
 };
 
-export { newCart, getById, addToCart };
+const getTotal = async (req, res) => {
+    const { cid , uid } = req.params;
+    try {
+        const result = await cartsService.getTotal(cid, uid);
+        if (result) return res.sendSuccess(result);
+    } catch (error) {
+        if (error instanceof CartNotFound) return res.sendClientError(error.message);
+        res.sendServerError(error.message);
+    };
+}
+
+const purchase = async (req, res) => {
+    const sale = req.body;
+    const { user } = req.user;
+    try {
+        const result = await cartsService.purchase(sale, user);
+        if (result) return res.sendSuccess(result);
+    } catch (error) {
+        if (error instanceof CartNotFound) return res.sendClientError(error.message);
+        res.sendServerError(error.message);
+    };
+};
+
+export { newCart, getById, addToCart, getTotal, purchase };

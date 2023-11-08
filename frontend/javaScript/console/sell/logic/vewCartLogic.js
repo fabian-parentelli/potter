@@ -1,6 +1,5 @@
 import { vewCartShow } from '../show/vewCartShow.js';
 
-const cart = localStorage.getItem('cart');
 const token = localStorage.getItem('token');
 
 export function callCart(btn, consoleBody) {
@@ -8,6 +7,8 @@ export function callCart(btn, consoleBody) {
 
     btn.addEventListener('click', async (e) => {
         e.preventDefault();
+
+        const cart = localStorage.getItem('cart');
 
         const response = await fetch(`http://localhost:8080/api/cart/${cart}`, {
             method: 'GET',
@@ -25,11 +26,11 @@ export function callCart(btn, consoleBody) {
     });
 };
 
-export async function getCustomer(id) {
+export async function getCustomer() {
 
-    console.log(id);
+    const id = localStorage.getItem('cart')
 
-    const respuesta = await fetch(`http://localhost:8080/api/customer/${id}`, {
+    const respuesta = await fetch(`http://localhost:8080/api/customer/cart/${id}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -38,5 +39,5 @@ export async function getCustomer(id) {
     });
 
     const content = await respuesta.json();
-    console.log(content);
+    return content.data;
 };

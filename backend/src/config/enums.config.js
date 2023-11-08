@@ -3,4 +3,11 @@ const passportEnum = {
     NOTHING: 'na'
 };
 
-export { passportEnum };
+const inventoryEnum = {
+    SALE: 'sale',
+    NEWPRODUCTION: 'new production',
+    MODIFY: 'modify',
+    TRANSFER: 'transfer'
+};
+
+export { passportEnum, inventoryEnum };

@@ -1,0 +1,192 @@
+//  addBottles
+.addBottle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4 {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
+    .formBottle {
+        height: auto;
+        background-color: #1099bb;
+        padding: 6px;
+        gap: 6px;
+        select {
+            height: 30px;
+            border-radius: 6px;
+            border: 1px #0b414e solid;
+        }
+        .bottleQunatiyty {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            input {
+                width: 60px;
+            }
+            label{
+                margin-right: 2rem;
+            }
+        }
+        .radialBottle {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: #4c8694;
+            border-radius: 6px;
+            width: 100%;
+            .rad {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+        .btnBottle {
+            height: 30px;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 6px;
+            border: 1px #0b414e solid;
+            cursor: pointer;
+            transition: .3s;
+            &:hover {
+                background-color: #4c8694;
+            }
+            &:active {
+                border: none;
+            }
+        }
+    }
+}
+
+// VewBottle
+.divContBottle {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem 0;
+    flex-wrap: wrap;
+    .divBottle {
+        width: 280px;
+        height: fit-content;
+        border: #0b414e solid 2px;
+        border-radius: 6px;
+        background-color: #1099bb;
+        .divPro {
+            background-color: #4c8694;
+            display: flex;
+            justify-content: space-between;
+            padding: 6px;
+            p:first-child {
+                font-weight: 600;
+            }
+        }
+        .divCre {
+            background-color: #4c8694;
+            display: flex;
+            justify-content: space-between;
+            padding: 6px;
+            p:first-child {
+                font-weight: 600;
+                color: rgb(107, 10, 10);
+            }
+        }
+    }
+}
+
+// modifyBottles. (modifyBottle). 
+
+.divBottleFind {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    #formBottleFind {
+        height: auto;
+        gap: 1rem;
+        background-color: #0b414e;
+        padding: 6px;
+        select {
+            border-radius: 6px;
+            height: 30px;
+        }
+        input {
+            background-color: #1099bb;
+            height: 30px;
+            border: #0b414e solid 2px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: .3s;
+            box-shadow: 1px 1px 1px;
+            &:hover {
+                background-color: #4c8694;
+            }
+            &:active {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+// (vewBottleModify).
+
+.divModifyBottle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .formModifyBottle {
+        background-color: #0b414e;
+        color: aliceblue;
+        height: auto;
+        .prodBottle {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            margin: 1rem 0;
+            input {
+                width: 60px;
+                text-align: center;
+            }
+        }
+        .credito {
+            color: rgb(214, 100, 100);
+        }
+        .credBottle {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin: 1rem 0;
+            input {
+                width: 60px;
+                background-color: rgb(214, 100, 100);
+                border: black;
+                text-align: center;
+            }
+        }
+        .buttonModifyButton {
+            background-color: #1099bb;
+            height: 30px;
+            border: #0b414e solid 2px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: .3s;
+            box-shadow: 1px 1px 1px;
+            &:hover {
+                background-color: #4c8694;
+            }
+            &:active {
+                box-shadow: none;
+            }
+        }
+    }
+}
