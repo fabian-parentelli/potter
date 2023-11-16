@@ -41,3 +41,5 @@ function userOptions(user, operation) {
         operation.appendChild(option);
     });
 };
+
+// Segun de donde sale y hacia donde va tengo que ver que producto tienes y que cantidad puedo transferir.
